@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+main {
+  display: grid;
+  grid-template-areas: "nav" "primero" "leyenda" "encriptadores" "decifrado";
+  height: 933px;
+  width: 375px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 14% 37% 3% 20% 24%;
+}
+body {
+  margin: 0;
+}
+html {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f5fc;
+}
+nav {
+  display: grid;
+  grid-area: nav;
+  margin: 5%;
+  justify-content: left;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.primero {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-area: primero;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  padding: 0.5rem;
+  border: none;
+}
+.decifrado {
+  display: grid;
+  grid-area: decifrado;
+  text-align: center;
+  border-radius: 32px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background: #ffffff;
+  font-size: 23px;
+}
+.encriptadores {
+  display: grid;
+  align-items: center;
+  grid-area: encriptadores;
+  grid-template-areas: "encriptar encriptar" "desencriptar desencriptar";
+  grid-template-rows: 1fr 1fr;
+}
+.leyenda {
+  grid-area: leyenda;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  opacity: 50%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+textarea {
+  border: none;
+  background-color: #f3f5fc;
+  resize: none;
+  min-width: 100%;
+  min-height: 100%;
+  color: #0a3871;
+  font-size: 32px;
+  font-family: "Inter";
+}
+
+.encriptar {
+  display: grid;
+  border: 1px solid;
+  border-color: #274f82;
+  background-color: #0a3871;
+  border-radius: 24px;
+  color: white;
+  font-size: 16px;
+  padding: 24px;
+  margin: 10px;
+  grid-area: encriptar;
+}
+.desencriptar {
+  display: grid;
+  border: 1px solid;
+  border-color: #274f82;
+  background-color: #d8dfe8;
+  border-radius: 24px;
+  color: #0a3871;
+  font-size: 16px;
+  padding: 24px;
+  margin: 10px;
+  grid-area: desencriptar;
+}
+#texto::placeholder {
+  color: #0a3871;
+  font-family: "Inter";
+  font-size: 32px;
+  /* terminado */
+}
+.boton-decifrado {
+  border: 1px solid;
+  border-color: #274f82;
+  background-color: #ffffff;
+  border-radius: 24px;
+  color: #0a3871;
+  font-size: 16px;
+  padding: 24px;
+  margin: 10px;
+  width: 80%;
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: grid;
+    margin: 0;
+    align-content: center;
+    height: 1024px;
+    width: 1440px;
+    grid-gap: 25px;
+    grid-template-columns: 10% 50% 40%;
+    grid-template-rows: 10% 68% 1% 10%;
+    grid-template-areas:
+      "nav primero decifrado"
+      "nav primero decifrado"
+      "nav leyenda decifrado"
+      "nav encriptadores decifrado";
+  }
+  .primero {
+    margin-top: 120px;
+    padding: 0;
+  }
+  .decifrado {
+    margin-top: 50px;
+    margin-bottom: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
+    padding-bottom: 72%;
+  }
+  .encriptadores {
+    grid-template-areas: "encriptar desencriptar";
+    grid-template-rows: 1fr;
+    height: 120px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .overlay {
+    background-image: url("../img/mono.png");
+    margin-top: 30%;
+    background-repeat: no-repeat;
+    height: 400px;
+  }
+  .boton-decifrado {
+    text-align: center;
+    margin-left: 35px;
+    margin-top: 80%;
+    align-items: flex-end;
+  }
+  .decifrado.encriptado {
+    padding-bottom: 0px;
+  }
+}
+/* terminado version desktop */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    align-content: center;
+    height: 1174px;
+    width: 768px;
+    grid-template-rows: 15% 52% 1% 12% 14%;
+  }
+  .encriptadores {
+    grid-template-areas: "encriptar desencriptar";
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  nav {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .encriptar {
+    width: 332px;
+  }
+
+  .desencriptar {
+    width: 332px;
+  }
+  .decifrado {
+    text-align: center;
+    border-radius: 32px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background: #ffffff;
+    font-size: 23px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .primero {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .leyenda {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .boton-decifrado {
+    margin-left: 69px;
+  }
+}
+/* terminado version tablet*/
+@media (max-width: 767px) {
+  main {
+    display: grid;
+    grid-template-areas: "nav" "primero" "leyenda" "encriptadores" "decifrado";
+    height: 933px;
+    width: 375px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 14% 37% 3% 20% 24%;
+  }
+  body {
+    margin: 0;
+  }
+  html {
+    font-family: "Inter", sans-serif;
+    background-color: #f3f5fc;
+  }
+  nav {
+    display: grid;
+    grid-area: nav;
+    margin: 5%;
+    justify-content: left;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .primero {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-area: primero;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 0.5rem;
+    border: none;
+  }
+  .decifrado {
+    display: grid;
+    grid-area: decifrado;
+    text-align: center;
+    border-radius: 32px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background: #ffffff;
+    font-size: 23px;
+  }
+  .encriptadores {
+    display: grid;
+    align-items: center;
+    grid-area: encriptadores;
+    grid-template-areas: "encriptar encriptar" "desencriptar desencriptar";
+    grid-template-rows: 1fr 1fr;
+  }
+  .leyenda {
+    grid-area: leyenda;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  textarea {
+    border: none;
+    background-color: #f3f5fc;
+    resize: none;
+    min-width: 100%;
+    min-height: 100%;
+    color: #0a3871;
+    font-size: 32px;
+    font-family: "Inter";
+  }
+
+  .encriptar {
+    display: grid;
+    border: 1px solid;
+    border-color: #274f82;
+    background-color: #0a3871;
+    border-radius: 24px;
+    color: white;
+    font-size: 16px;
+    padding: 24px;
+    margin: 10px;
+    grid-area: encriptar;
+  }
+  .desencriptar {
+    display: grid;
+    border: 1px solid;
+    border-color: #274f82;
+    background-color: #d8dfe8;
+    border-radius: 24px;
+    color: #0a3871;
+    font-size: 16px;
+    padding: 24px;
+    margin: 10px;
+    grid-area: desencriptar;
+  }
+  #texto::placeholder {
+    color: #0a3871;
+    font-family: "Inter";
+    font-size: 32px;
+    /* terminado */
+  }
+  .boton-decifrado {
+    border: 1px solid;
+    border-color: #274f82;
+    background-color: #ffffff;
+    border-radius: 24px;
+    color: #0a3871;
+    font-size: 16px;
+    padding: 24px;
+    margin: 10px;
+    width: 80%;
+    margin-left: 35px;
+  }
+}
+/* terminado version phone */

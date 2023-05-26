@@ -1,3 +1,0 @@
-# alura
-# alura
-# encriptador

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+    <title>Alura Challenger</title>
+  </head>
+  <body>
+    <main>
+      <nav><img src="assets/img/alura.png" alt="Alura"></nav>
+
+      <div class="primero">
+            <textarea id="texto" name="texto" placeholder="Ingrese el texto aqui"></textarea>
+      </div>
+      <div class="leyenda">
+        <i class="fas fa-exclamation-circle">Solo letras minúsculas y
+            sin acentos</i>
+      </div>
+      <div class="encriptadores">
+        <button id="texto" class="encriptar" onclick="encriptar(); ocultarBotones(this);">
+          Encriptar
+        </button>
+        <button id="texto" class="desencriptar" onclick="desencriptar(); ocultarBotones(this);">
+          Desencriptar
+        </button>
+      </div>
+      <div id="decifrado" class="decifrado">
+        <div class="overlay"></div>
+        <h3>Ningún mensaje fue encontrado</h3>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+    </main>
+  </body>
+</html>
